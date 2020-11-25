@@ -14,7 +14,14 @@ output "vpc-public-a-id" {
 output "vpc-private-a" {
   value = aws_subnet.private-a.cidr_block
 }
-
+output "graphite_grafana_public_dns" {
+  description = "Graphite and Grafana public DNS Names"
+  value       = aws_instance.graphite_grafana.public_dns
+}
+output "graphite_grafana_ip" {
+  description = "Graphite and Grafana public DNS Names"
+  value       = aws_instance.graphite_grafana.private_ip
+}
 output "vpc-private-a-id" {
   value = aws_subnet.private-a.id
 }
